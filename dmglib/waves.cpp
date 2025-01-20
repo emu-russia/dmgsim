@@ -1,4 +1,5 @@
 // Signal waveform tracer. Outputs waves in text format.
+#include "dmglib.h"
 #include "waves.h"
 #include <vector>
 #include <string>
@@ -72,13 +73,13 @@ namespace dmglib
 					case single_bit: {
 						int* ptr = (int*)(st + signals[n].offset);
 						switch (*ptr) {
-							case -1:
+							case HIGHZ:
 								text += "--";		// z
 								break;
-							case 0:
+							case ZERO:
 								text += "__";		// 0
 								break;
-							case 1:
+							case ONE:
 								text += "‾‾";		// 1
 								break;
 							default:

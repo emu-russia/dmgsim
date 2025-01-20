@@ -1,6 +1,6 @@
 # dmgsim
 
-DMG CPU functional simulator in C.
+DMG CPU functional simulator in C/C++.
 
 - dmglib: DMG-CPU component base
 - sm83sim: SHARP SM83 Core functional simulator

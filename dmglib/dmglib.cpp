@@ -4,6 +4,11 @@ namespace dmglib
 {
 	int Not(int a)
 	{
+#if _DEBUG
+		if (!(a == ZERO || a == ONE)) {
+			throw "Something went wrong. Check the sequence of the circuit simulation";
+		}
+#endif
 		return ~a & 1;
 	}
 
